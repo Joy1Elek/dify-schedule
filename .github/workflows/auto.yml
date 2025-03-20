@@ -2,9 +2,7 @@ name: Auto
 
 on:
   schedule:
-    - cron: "0 * * * *"  # 整点触发
-    - cron: "30 * * * *" # 半点触发
-  workflow_dispatch:  
+   - cron: "10 9 * * *"  # 每天 UTC 时间 09:10（对应北京时间 17:10）
 
 env:
   DIFY_TOKENS: ${{ secrets.DIFY_TOKENS }}
