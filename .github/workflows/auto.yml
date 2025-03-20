@@ -2,8 +2,9 @@ name: Auto
 
 on:
   schedule:
-    - cron: "*/30 * * * *" 
-  workflow_dispatch:    
+    - cron: "0 * * * *"  # 整点触发
+    - cron: "30 * * * *" # 半点触发
+  workflow_dispatch:  
 
 env:
   DIFY_TOKENS: ${{ secrets.DIFY_TOKENS }}
